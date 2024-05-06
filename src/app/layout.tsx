@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { K2d } from "@/lib/font";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${K2d.className} bg-[#131B25] text-[#FFFFFF]`}>
+        {children}
+      </body>
     </html>
   );
 }
