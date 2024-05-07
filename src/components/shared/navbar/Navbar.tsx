@@ -2,7 +2,6 @@ import React from "react";
 import Container from "../Container";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { roboto } from "@/lib/font";
 import Image from "next/image";
 import logo from "../../../assets/Logo_Light.webp";
 import { Button } from "@/components/ui/button";
