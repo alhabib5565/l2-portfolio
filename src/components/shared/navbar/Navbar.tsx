@@ -3,24 +3,11 @@ import Container from "../Container";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../../../assets/Logo_Light.webp";
+import logo from "../../../assets/logo.png";
 import { Button } from "@/components/ui/button";
+import { navItems } from "@/constant/common";
 
 const Navbar = () => {
-  const navItems = [
-    {
-      path: "/",
-      pathName: "Home",
-    },
-    {
-      path: "/projects",
-      pathName: "Projects",
-    },
-    {
-      path: "/about",
-      pathName: "About",
-    },
-  ];
   return (
     <Container>
       <div
@@ -29,14 +16,8 @@ const Navbar = () => {
         )}
       >
         <div className="flex justify-between items-center gap-5">
-          <Image
-            className="text-white"
-            height={40}
-            width={70}
-            src={logo}
-            alt=""
-          />
-          {navItems.map((item) => (
+          <Image className="" height={40} width={70} src={logo} alt="" />
+          {navItems.slice(0, 3).map((item) => (
             <Link
               key={item.path}
               href={item.path}
@@ -48,7 +29,9 @@ const Navbar = () => {
           ))}
         </div>
         <div>
-          <Button>Contact</Button>
+          <Link href="contact">
+            <Button>Contact</Button>
+          </Link>
         </div>
       </div>
     </Container>

@@ -6,7 +6,7 @@ import eclass from "../../assets/projects/eclass.png";
 import collage_addmission from "../../assets/projects/collage_addmision.png";
 import Container from "@/components/shared/Container";
 import Image, { StaticImageData } from "next/image";
-import SectionHeader from "@/components/shared/SectionHeader";
+import SectionHeader from "./SectionHeader";
 const Projects = () => {
   const projects = [
     {
@@ -82,7 +82,7 @@ const Projects = () => {
           description="Here you will find some of the personal projects that I created with each project containing its own case study
 "
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-4 mt-10 mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-4 md:gap-6 mt-10 mx-auto">
           {/* card */}
           {projects.map((item) => (
             <Card project={item} key={item.name} />
@@ -111,7 +111,7 @@ const Card = ({ project }: { project: TProjectProps }) => {
     initial: { x: -100, opacity: 0 },
     whileInView: {
       x: 0,
-      rotate: [20, 0],
+      // rotate: [20, 0],
       opacity: 1,
       transition: {
         duration: 2,
@@ -136,13 +136,16 @@ const Card = ({ project }: { project: TProjectProps }) => {
       transition={{ staggerChildren: 0.5 }}
       layout
       key={project.name}
-      className=" rounded-lg space-y-4 overflow-hidden"
+      className=" bg-zinc-800 rounded-lg space-y-4 overflow-hidden"
     >
-      <motion.div className="h-[300px] w-full" variants={imageVariants}>
+      <motion.div
+        className="h-[220px] w-full overflow-hidden"
+        variants={imageVariants}
+      >
         <Image
           style={{
             width: "100%",
-            height: "100%",
+            height: "auto",
           }}
           className=" rounded-md"
           src={project.image}
@@ -152,14 +155,13 @@ const Card = ({ project }: { project: TProjectProps }) => {
       <div className="p-4">
         <motion.h1
           variants={textVariants}
-          className="text-2xl   truncate font-extrabold tracking-[0.5px]"
+          className="text-2xl  font-extrabold tracking-[0.5px]"
         >
           {project.name}
         </motion.h1>
-        <motion.p variants={textVariants} className="text-xl font-medium  ">
-          Lorem ipsum dolor sit amet.
-          {/* {project.description.split(" ").slice(0, 5).join(" ")} */}
-        </motion.p>
+        {/* <motion.p variants={textVariants} className="text-xl font-medium  ">
+          {project.description.split(" ").slice(0, 5).join(" ")}
+        </motion.p> */}
       </div>
     </motion.div>
   );

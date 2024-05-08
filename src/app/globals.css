@@ -74,3 +74,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .header-border::before {
+    @apply content-[''] absolute -bottom-2 left-0 h-1 w-20 rounded-md bg-primary;
+  }
+}

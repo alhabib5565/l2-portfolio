@@ -1,8 +1,8 @@
 import Container from "@/components/shared/Container";
-import SectionHeader from "@/components/shared/SectionHeader";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import React from "react";
+import SectionHeader from "./SectionHeader";
 
 const AboutMe = () => {
   const skills = [
@@ -41,7 +41,7 @@ const AboutMe = () => {
             current skills mostly in terms of programming and technology"
         />
 
-        <div className="flex justify-between gap-10 md:gap-14">
+        <div className="flex flex-col md:flex-row md:justify-between gap-10 md:gap-14">
           <div className="flex-1">
             <h1 className="text-[28px] mb-3 font-bold text-slate-300">
               Get to know me!
@@ -85,7 +85,7 @@ const AboutMe = () => {
             </h1>
             <div>
               <h3 className="text-[16px] font-extrabold ">Technology</h3>
-              <div className="mt-3 flex gap-4 flex-wrap">
+              <div className="mt-3 flex gap-3 md:gap-4 flex-wrap">
                 {skills.map((skill) => (
                   <span
                     key={skill}
