@@ -11,7 +11,7 @@ import logo from "../../assets/logo.png";
 const DesktopSidebar = () => {
   const pathName = usePathname();
   return (
-    <aside className="bg-[#131E2B] w-[300px] max-w-xs h-screen fixed left-0 top-0 z-40 border-r overflow-y-scroll">
+    <aside className="bg-slate-800 w-[300px] max-w-xs h-screen fixed left-0 top-0 z-40 border-r overflow-y-scroll">
       <div className="h-full px-3 py-4">
         <Image className="" height={40} width={70} src={logo} alt="" />
         <hr className="mt-3 mb-6" />

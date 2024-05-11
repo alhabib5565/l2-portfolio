@@ -14,7 +14,7 @@ const layout = ({
   return (
     <div>
       <Sidebar />
-      <div className="md:ml-[300px]">{children}</div>
+      <div className="md:ml-[300px] p-3">{children}</div>
     </div>
   );
 };

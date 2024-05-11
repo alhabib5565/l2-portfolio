@@ -29,7 +29,7 @@ const MobileSidebar = () => {
       </SheetTrigger>
       <SheetContent
         hideClose
-        className="bg-black px-3 py-4 w-[300px]"
+        className="bg-slate-800 px-3 py-4 w-[300px]"
         side="left"
       >
         <SheetHeader className="flex flex-row justify-between items-center space-y-0">
