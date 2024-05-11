@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { K2d } from "@/lib/font";
-import Navbar from "@/components/shared/navbar/Navbar";
-import Footer from "./home/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,9 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${K2d.className} bg-[#131B25] text-[#FFFFFF]`}>
-        <Navbar />
         {children}
-        <Footer />
       </body>
     </html>
   );

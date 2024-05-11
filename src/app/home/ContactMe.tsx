@@ -1,7 +1,7 @@
 import Container from "@/components/shared/Container";
 import React from "react";
 import SectionHeader from "./SectionHeader";
-import ContactForm from "../contact/components/ContactForm";
+import ContactForm from "../(mainLayout)/contact/components/ContactForm";
 
 const ContactMe = () => {
   return (

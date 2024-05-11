@@ -1,13 +1,13 @@
 import Container from "@/components/shared/Container";
 import React from "react";
-import SectionHeader from "../home/SectionHeader";
-import ContactForm from "./components/ContactForm";
 import { ArrowRight } from "lucide-react";
-import github from "../../assets/icons/github.png";
-import linkedin from "../../assets/icons/linkedin.png";
-import facebook from "../../assets/icons/facebook.webp";
+import github from "../../../assets/icons/github.png";
+import linkedin from "../../../assets/icons/linkedin.png";
+import facebook from "../../../assets/icons/facebook.webp";
 import Image from "next/image";
 import Link from "next/link";
+import SectionHeader from "@/app/home/SectionHeader";
+import ContactForm from "./components/ContactForm";
 const ContactPage = () => {
   const socialLinks = [
     {
