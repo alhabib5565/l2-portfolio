@@ -1,3 +1,5 @@
+"use client";
+import { TOptions } from "@/type/common";
 import {
   FormControl,
   FormField,
@@ -6,15 +8,16 @@ import {
   FormMessage,
 } from "../ui/form";
 import { useFormContext } from "react-hook-form";
-import { Textarea } from "../ui/textarea";
+import Select from "react-select";
 
-type TMyTextarea = {
+type TMyMuliSelect = {
   name: string;
   label: string;
-  placeholder: string;
+  placeholder?: string;
+  options: TOptions[];
 };
 
-const MyTextarea = ({ name, label, placeholder }: TMyTextarea) => {
+const MyMuliSelect = ({ name, label, options }: TMyMuliSelect) => {
   const form = useFormContext();
   return (
     <FormField
@@ -25,11 +28,13 @@ const MyTextarea = ({ name, label, placeholder }: TMyTextarea) => {
           <FormItem>
             <FormLabel>{label}</FormLabel>
             <FormControl>
-              <Textarea
-                rows={7}
-                className="bg-transparent"
-                placeholder={placeholder}
+              <Select
                 {...field}
+                defaultValue={[options[0]]}
+                isMulti
+                options={options}
+                className="basic-multi-select"
+                classNamePrefix="select"
               />
             </FormControl>
             <FormMessage>{error?.message}</FormMessage>
@@ -40,4 +45,4 @@ const MyTextarea = ({ name, label, placeholder }: TMyTextarea) => {
   );
 };
 
-export default MyTextarea;
+export default MyMuliSelect;
