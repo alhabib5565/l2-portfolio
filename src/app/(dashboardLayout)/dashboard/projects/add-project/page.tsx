@@ -2,7 +2,6 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { FieldValues } from "react-hook-form";
-import { z } from "zod";
 
 import { Button } from "@/components/ui/button";
 
@@ -11,55 +10,35 @@ import MyInput from "@/components/form/MyInput";
 import MyTextarea from "@/components/form/MyTextarea";
 import { MySelect } from "@/components/form/MySelect";
 import MyMuliSelect from "@/components/form/MyMuliSelect";
-
-const formSchema = z.object({
-  name: z.string().min(1, {
-    message: "Project name is required",
-  }),
-  category: z.string().min(1, {
-    message: "Project name is required",
-  }),
-  description: z.string().min(1, {
-    message: "Project description is required",
-  }),
-  technologies: z
-    .array(
-      z.object({
-        value: z.string(),
-        label: z.string(),
-      })
-    )
-    .nonempty(),
-  liveUrl: z
-    .string({
-      required_error: "Project live url is requird",
-    })
-    .url({ message: "Invalid url" }),
-  clientCode: z.string().url({ message: "Invalid url" }).optional(),
-  serverCode: z.string().url({ message: "Invalid url" }).optional(),
-});
-
-const categoryOptions = [
-  { value: "chocolate", label: "Chocolate" },
-  { value: "strawberry", label: "Strawberry" },
-  { value: "vanilla", label: "Vanilla" },
-];
+import {
+  addProjectDefaultValues,
+  addProjectFormValidation,
+} from "@/validationSchema/addProjectValidation";
+import { categoryOptions } from "@/selectOptions/categoryOptions";
+import {
+  useAddProjectMutation,
+  useGetAllProjectsQuery,
+} from "@/redux/api/projectApi";
+import { useRouter } from "next/navigation";
 
 const CreateProjectPage = () => {
-  const onSubmit = (values: FieldValues) => {
-    console.log(values);
+  const router = useRouter();
+  const [addProject] = useAddProjectMutation();
+  const { data, isLoading } = useGetAllProjectsQuery({});
+  console.log(data);
+
+  const onSubmit = async (values: FieldValues) => {
+    const response = await addProject(values);
+    if (response?.data) {
+      router.push("/dashboard/projects");
+    }
   };
-  const defaultValues = {
-    name: "name",
-    category: "categoy",
-    description: "des",
-    liveUrl: "https://ww",
-  };
+
   return (
     <div className="max-w-5xl mx-auto bg-slate-800 p-4 rounded-md mt-10">
       <MyForm
-        defaultValues={defaultValues}
-        resolver={zodResolver(formSchema)}
+        defaultValues={addProjectDefaultValues}
+        resolver={zodResolver(addProjectFormValidation)}
         onSubmit={onSubmit}
       >
         <div className="grid grid-cols-12 gap-4">
