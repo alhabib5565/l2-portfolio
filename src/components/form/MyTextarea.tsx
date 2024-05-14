@@ -26,7 +26,7 @@ const MyTextarea = ({ name, label, placeholder }: TMyTextarea) => {
             <FormLabel>{label}</FormLabel>
             <FormControl>
               <Textarea
-                rows={7}
+                rows={9}
                 className="bg-transparent"
                 placeholder={placeholder}
                 {...field}

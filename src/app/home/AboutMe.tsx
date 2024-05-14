@@ -3,33 +3,14 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import React from "react";
 import SectionHeader from "./SectionHeader";
+import { TSkills } from "@/type/common";
 
-const AboutMe = () => {
-  const skills = [
-    "HTML",
-    "CSS",
-    "Tailwind",
-    "Bootstrap",
-    "Javascript",
-    "Typescript",
-    "React.js",
-    "Next.js",
-    "Redux",
-    "Axios",
-    "Firebase",
-    "Node.js",
-    "Express",
-    "MongoDB",
-    "Mongoosh",
-    "JWT",
-  ];
-
-  const s = [
-    {
-      title: "HTML",
-      color: "bg-orange-500",
-    },
-  ];
+const AboutMe = async () => {
+  const response = await fetch(
+    "https://portfolio-server-six-phi.vercel.app/api/v1/skills"
+  );
+  const data = await response.json();
+  const skills = data.data.map((item: TSkills) => item.name);
 
   const tools = ["GitHub", "VS Code", "Postman", "Vercel", "Netlify"];
   return (
@@ -86,7 +67,7 @@ const AboutMe = () => {
             <div>
               <h3 className="text-[16px] font-extrabold ">Technology</h3>
               <div className="mt-3 flex gap-3 md:gap-4 flex-wrap">
-                {skills.map((skill) => (
+                {skills.map((skill: string) => (
                   <span
                     key={skill}
                     className="text-[16px] font-semibold py-2 px-5 rounded-md bg-white text-[#666]"

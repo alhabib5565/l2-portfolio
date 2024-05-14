@@ -15,22 +15,37 @@ import {
   addProjectFormValidation,
 } from "@/validationSchema/addProjectValidation";
 import { categoryOptions } from "@/selectOptions/categoryOptions";
-import {
-  useAddProjectMutation,
-  useGetAllProjectsQuery,
-} from "@/redux/api/projectApi";
+import { useAddProjectMutation } from "@/redux/api/projectApi";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import AddImage from "@/components/shared/AddImage";
+import { FormLabel } from "@/components/ui/form";
+import { toast } from "sonner";
+import { useGetAllSkillsQuery } from "@/redux/api/skillsApi";
+import { TOptions, TSkills } from "@/type/common";
 
 const CreateProjectPage = () => {
+  const [imageUrl, setImageUrl] = useState("");
   const router = useRouter();
   const [addProject] = useAddProjectMutation();
-  const { data, isLoading } = useGetAllProjectsQuery({});
-  console.log(data);
+  const { data: skills, isLoading: skillsLoading } = useGetAllSkillsQuery({});
+
+  if (skillsLoading) {
+    return <p>loading...</p>;
+  }
+
+  const technologiesOptions: TOptions[] = skills.data.map((item: TSkills) => ({
+    value: item.name,
+    label: item.name,
+  }));
 
   const onSubmit = async (values: FieldValues) => {
+    values.image = imageUrl;
+    console.log(values);
     const response = await addProject(values);
     if (response?.data) {
       router.push("/dashboard/projects");
+      toast.success("Project create succesfull");
     }
   };
 
@@ -86,16 +101,23 @@ const CreateProjectPage = () => {
             <MyMuliSelect
               label="Select Technologies"
               name="technologies"
-              options={categoryOptions}
+              options={technologiesOptions}
               placeholder=""
             />
           </div>
-          <div className="col-span-12 ">
+          <div className="col-span-12 lg:col-span-6 ">
             <MyTextarea
               name="description"
               label="Project description"
               placeholder="Enter project description"
             />
+          </div>
+          <div className="col-span-12 lg:col-span-6">
+            <FormLabel>Add image</FormLabel>
+
+            <div className="mt-2">
+              <AddImage imageUrl={imageUrl} setImageUrl={setImageUrl} />
+            </div>
           </div>
         </div>
         <div className="flex justify-end mt-6">

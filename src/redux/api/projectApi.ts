@@ -14,7 +14,8 @@ const projectApi = baseApi.injectEndpoints({
         getAllProjects: builder.query({
             query: () => ({
                 url: '/projects'
-            })
+            }),
+            providesTags: ["projects"]
         })
     })
 })

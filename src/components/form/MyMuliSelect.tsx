@@ -33,7 +33,7 @@ const MyMuliSelect = ({ name, label, options }: TMyMuliSelect) => {
                 defaultValue={[options[0]]}
                 isMulti
                 options={options}
-                className="basic-multi-select"
+                className="basic-multi-select text-slate-800"
                 classNamePrefix="select"
               />
             </FormControl>

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { K2d } from "@/lib/font";
-import { Provider } from "react-redux";
-import { store } from "@/redux/store";
 import ReduxProvider from "@/providers/ReduxProvider";
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: "Portfoli",
@@ -19,6 +18,7 @@ export default function RootLayout({
     <ReduxProvider>
       <html lang="en">
         <body className={`${K2d.className} bg-[#131B25] text-[#FFFFFF]`}>
+          <Toaster />
           {children}
         </body>
       </html>

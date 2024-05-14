@@ -11,16 +11,14 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
+import { useAddSkillMutation } from "@/redux/api/skillsApi";
 import { TOptions } from "@/type/common";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Plus } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { FieldValues } from "react-hook-form";
+import { toast } from "sonner";
 import { z } from "zod";
-
-export type TSkills = {
-  name: string;
-  expertiseLavel: string;
-};
 
 const expertiseLavelOptions: TOptions[] = [
   {
@@ -44,8 +42,15 @@ const defaultValue = {
 };
 
 const AddSkillModal = () => {
-  const onSubmit = (values: FieldValues) => {
-    console.log(values);
+  const router = useRouter();
+  const [addSkill] = useAddSkillMutation();
+  const onSubmit = async (values: FieldValues) => {
+    const response = await addSkill(values);
+    if (response?.data) {
+      toast.success("Skill create succesfull");
+    }
+    console.log(response);
+    router.refresh();
   };
 
   return (

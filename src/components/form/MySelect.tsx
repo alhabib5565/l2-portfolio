@@ -35,7 +35,7 @@ export function MySelect({ label, name, placeholder, options }: TMySelect) {
       render={({ field }) => (
         <FormItem>
           <FormLabel>{label}</FormLabel>
-          <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <Select onValueChange={field.onChange}>
             <FormControl className="bg-transparent">
               <SelectTrigger>
                 <SelectValue placeholder={placeholder} />
