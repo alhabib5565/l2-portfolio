@@ -1,5 +1,5 @@
 import Container from "@/components/shared/Container";
-import { convertTimee } from "@/utils/converTime";
+import { convertTimee } from "@/utils/convertTime";
 import Image from "next/image";
 import React from "react";
 
