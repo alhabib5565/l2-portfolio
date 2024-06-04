@@ -7,85 +7,66 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import {
+  heroSectionContainerVariants,
+  imageVariants,
+  letterVariants,
+  sentenceVariants,
+  textWraperVariants,
+} from "@/variants/heroVariants";
+import {
+  description,
+  greeting,
+  name,
+  resumeLink,
+} from "@/constant/heroConstant";
 const Hero = () => {
-  const textWraper = {
-    initial: {
-      opacity: 0,
-    },
-    animate: {
-      opacity: 1,
-      transition: {
-        // delayChildren: 0.2,
-        staggerChildren: 0.05,
-      },
-    },
-  };
-  const text = {
-    initial: {
-      opacity: 0,
-      y: 20,
-    },
-    animate: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 260,
-        damping: 20,
-        // delay: 0.1 + index / 10,
-      },
-    },
-  };
-
   return (
     <Container>
-      <div
+      <motion.div
+        variants={heroSectionContainerVariants}
+        initial="initial"
+        animate="animate"
         className={cn(
           "flex flex-col md:flex-row items-center md:items-start md:justify-between gap-8 pt-5"
         )}
       >
         <div className="max-w-[550px] w-full flex flex-col items-center md:items-start md:text-left text-center">
           <motion.div
-            variants={textWraper}
-            initial="initial"
-            animate="animate"
+            variants={textWraperVariants}
             className="text-[40px] md:text-[60px] font-[800] tracking-[1px] mt-10"
           >
-            {"Hello, I’m".split("").map((letter, index) => (
+            {greeting.split("").map((letter, index) => (
               <motion.span
                 className="inline-block min-w-6"
-                variants={text}
+                variants={letterVariants}
                 key={index}
               >
                 {letter}
               </motion.span>
             ))}
 
-            <div className="bg-gradient-to-r from-[#D899FF] via-[#D660FF] to-[#FF5133] text-transparent bg-clip-text">
-              <p>
-                {" "}
-                {"MD. Al-Habib!".split("").map((letter, index) => (
-                  <motion.span
-                    className="inline-block"
-                    variants={text}
-                    key={index}
-                  >
-                    {letter}
-                  </motion.span>
-                ))}
-              </p>
+            <div className="bg-gradient-to-r from-[#D899FF] via-[#D660FF] to-[#FF5133]  bg-clip-text">
+              {name.split("").map((letter, index) => (
+                <motion.span
+                  className="inline-block min-w-6"
+                  variants={letterVariants}
+                  key={index}
+                >
+                  {letter}
+                </motion.span>
+              ))}
             </div>
           </motion.div>
-          <h2 className="text-[22px]">
-            I’m a Frontend Web Developer, MERN Stack Web Developer
-          </h2>
-          <div className="mt-6 flex items-center gap-6">
+          <motion.h2 variants={sentenceVariants} className="text-[22px]">
+            {description}
+          </motion.h2>
+          <motion.div
+            variants={sentenceVariants}
+            className="mt-6 flex items-center gap-6"
+          >
             <Button>
-              {" "}
-              <a
-                href="https://drive.google.com/uc?export=download&id=1Q286hmzLIeEhrvEXqNcCzCxSlu1trdpE"
-                download="resume.pdf"
-              >
+              <a href={resumeLink} download="resume.pdf">
                 Download My Resume
               </a>
             </Button>
@@ -94,9 +75,12 @@ const Hero = () => {
                 Show projects
               </Button>
             </Link>
-          </div>
+          </motion.div>
         </div>
-        <div className="w-[300px] h-[300px] md:h-[400px] md:w-[400px] ">
+        <motion.div
+          variants={imageVariants}
+          className="w-[300px] h-[300px] md:h-[400px] md:w-[400px] "
+        >
           <Image
             style={{
               height: "100%",
@@ -106,8 +90,8 @@ const Hero = () => {
             src={hero}
             alt=""
           />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </Container>
   );
 };
