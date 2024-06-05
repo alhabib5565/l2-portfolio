@@ -33,6 +33,7 @@ const ProjectCard = ({ project }: { project: TProjectProps }) => {
     <motion.div
       initial="initial"
       whileInView="whileInView"
+      viewport={{ once: true }}
       transition={{ staggerChildren: 0.5 }}
       layout
       key={project.name}

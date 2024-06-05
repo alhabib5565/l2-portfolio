@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useRef, useState } from "react";
 import Container from "../Container";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -7,13 +8,26 @@ import logo from "../../../assets/logo.png";
 import { Button } from "@/components/ui/button";
 import { navItems } from "@/constant/common";
 import MobileNav from "./MobileNav";
+import { motion } from "framer-motion";
+import { useMotionValueEvent, useScroll } from "framer-motion";
+import SmallNav from "./SmallNav";
 
 const Navbar = () => {
+  const [hidden, setHidden] = useState(true);
+  const { scrollY } = useScroll();
+  useMotionValueEvent(scrollY, "change", (latestValue) => {
+    if (latestValue > 80) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+  });
   return (
     <Container className="relative">
       <div
         className={cn(
-          " h-[50px] mt-5 lg:mt-[35px] mb-[50px] flex justify-between lg:justify-normal items-center gap-5"
+          " h-[50px] mt-5 lg:mt-[35px]  flex justify-between lg:justify-normal items-center gap-5",
+          { "opacity-0": hidden }
         )}
       >
         <div>
@@ -22,7 +36,11 @@ const Navbar = () => {
         {/* mobile */}
         <MobileNav />
         {/* desktop */}
-        <div className="flex-1 hidden lg:flex justify-between items-center">
+        <div
+          className={cn("flex-1 hidden lg:flex justify-between items-center", {
+            "hidden opacity-0": hidden,
+          })}
+        >
           <div className="flex justify-between items-center gap-5">
             {navItems.slice(0, 3).map((item) => (
               <Link
@@ -41,7 +59,18 @@ const Navbar = () => {
             </Link>
           </div>
         </div>
+
+        {/* affter scroll 80 pixel then show the small nav */}
       </div>
+      {hidden && (
+        <motion.div
+          initial={{ opacity: 0, top: -20, left: "50%", translateX: "-50%" }}
+          animate={{ opacity: 1, top: 20 }}
+          className="fixed z-50"
+        >
+          <SmallNav hidden={hidden} />
+        </motion.div>
+      )}
     </Container>
   );
 };
