@@ -15,13 +15,18 @@ export type TBlog = {
     blogImage: string;
 }
 
+export type TTechnology = {
+    label: string;
+    value: string;
+}
+
 export type TProject = {
     name: string;
-    categroy: string;
+    category: string;
     liveUrl: string;
     clientCode: string;
     serverCode: string;
-    technologies: string[];
+    technologies: TTechnology[];
     description: string;
     image: string;
 };

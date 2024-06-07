@@ -29,8 +29,8 @@ export const addProjectFormValidation = z.object({
 
 
 export const addProjectDefaultValues = {
-    name: "name",
-    category: "categoy",
-    description: "des",
-    liveUrl: "https://ww",
+    name: "",
+    category: "",
+    description: "",
+    liveUrl: "",
 };
