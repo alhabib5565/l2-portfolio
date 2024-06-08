@@ -29,7 +29,7 @@ const SmallNav = ({ hidden }: TSmallNavProps) => {
           opacity: 0,
         }));
       }}
-      className="relative flex bg-white p-1 rounded-full w-fit mx-auto "
+      className="relative flex bg-white p-1 rounded-full w-fit mx-auto overflow-hidden"
     >
       {/* <Image className="" height={40} width={70} src={logo} alt="" /> */}
 

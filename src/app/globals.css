@@ -79,4 +79,16 @@
   .header-border::before {
     @apply content-[''] absolute -bottom-2 left-0 h-1 w-20 rounded-md bg-primary;
   }
+  .bg-animate-btn::before {
+    @apply content-[''] absolute top-0 right-[100%] h-1/2 w-full bg-[#1f2b39] rounded-t -z-10 opacity-0;
+  }
+  .bg-animate-btn::before:hover {
+    @apply right-0 duration-200 opacity-100;
+  }
+  .bg-animate-btn::after {
+    @apply content-[''] absolute bottom-0 left-[100%] h-1/2 w-full bg-[#303a43] rounded-b -z-10 opacity-0;
+  }
+  .bg-animate-btn::after:hover {
+    @apply left-0 duration-200 opacity-100;
+  }
 }

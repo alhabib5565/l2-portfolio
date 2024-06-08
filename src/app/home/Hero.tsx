@@ -28,17 +28,17 @@ const Hero = () => {
         initial="initial"
         animate="animate"
         className={cn(
-          "flex flex-col md:flex-row items-center md:items-start md:justify-between gap-8 pt-5"
+          "flex flex-col md:flex-row items-center md:items-start md:justify-between gap-8 pt-5 mt-14"
         )}
       >
-        <div className="max-w-[550px] w-full flex flex-col items-center md:items-start md:text-left text-center">
+        <div className="max-w-[550px] w-full flex flex-col gap-4 items-center md:items-start md:text-left text-center">
           <motion.div
             variants={textWraperVariants}
             className="text-[40px] md:text-[60px] font-[800] tracking-[1px] mt-10"
           >
             {greeting.split("").map((letter, index) => (
               <motion.span
-                className="inline-block min-w-6"
+                className="inline-block min-w-6 uppercase"
                 variants={letterVariants}
                 key={index}
               >
@@ -49,7 +49,7 @@ const Hero = () => {
             <div className="bg-gradient-to-r from-[#D899FF] via-[#D660FF] to-[#FF5133]  bg-clip-text">
               {name.split("").map((letter, index) => (
                 <motion.span
-                  className="inline-block min-w-6"
+                  className="inline-block min-w-6 uppercase"
                   variants={letterVariants}
                   key={index}
                 >

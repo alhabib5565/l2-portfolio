@@ -6,7 +6,7 @@ export const heroSectionContainerVariants = {
         opacity: 1,
         transition: {
             staggerDirection: -1,
-            staggerChildren: 0.3,
+            staggerChildren: 0.2,
         },
     },
 };
@@ -19,7 +19,7 @@ export const textWraperVariants = {
         opacity: 1,
         transition: {
             staggerDirection: -1,
-            staggerChildren: 0.03,
+            staggerChildren: 0.02,
         },
     },
 };
@@ -35,7 +35,7 @@ export const letterVariants = {
         transition: {
             type: "spring",
             stiffness: 260,
-            damping: 20,
+            damping: 15,
         },
     },
 };
@@ -48,7 +48,7 @@ export const imageVariants = {
         transition: {
             type: "spring",
             stiffness: 260,
-            damping: 20,
+            damping: 15,
         },
     },
 };
@@ -61,7 +61,7 @@ export const sentenceVariants = {
         transition: {
             type: "spring",
             stiffness: 260,
-            damping: 20,
+            damping: 15,
             // duration: 2,
         },
     },

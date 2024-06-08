@@ -4,14 +4,14 @@ import Link from "next/link";
 import React from "react";
 import SectionHeader from "./SectionHeader";
 import { TSkills } from "@/type/common";
+import Image from "next/image";
 
 const AboutMe = async () => {
   const response = await fetch(
     "https://portfolio-server-six-phi.vercel.app/api/v1/skills"
   );
   const data = await response.json();
-  const skills = data.data.map((item: TSkills) => item.name);
-
+  const skills = data.data;
   const tools = ["GitHub", "VS Code", "Postman", "Vercel", "Netlify"];
   return (
     <div className="mt-20 py-[50px]">
@@ -67,13 +67,20 @@ const AboutMe = async () => {
             <div>
               <h3 className="text-[16px] font-extrabold ">Technology</h3>
               <div className="mt-3 flex gap-3 md:gap-4 flex-wrap">
-                {skills.map((skill: string) => (
-                  <span
+                {skills.map((skill: any) => (
+                  <div
                     key={skill}
-                    className="text-[16px] font-semibold py-2 px-5 rounded-md bg-white text-[#666]"
+                    className="flex items-center gap-4 text-[16px] font-semibold p-2 rounded-full bg-white text-[#666]"
                   >
-                    {skill}
-                  </span>
+                    <Image
+                      height={40}
+                      width={40}
+                      src={skill.skillAvater}
+                      className="rounded-full"
+                      alt=""
+                    />
+                    <span>{skill.name}</span>
+                  </div>
                 ))}
               </div>
             </div>

@@ -81,7 +81,10 @@ const Projects = async () => {
           description="Here you will find some of the personal projects that I created with each project containing its own case study
 "
         />
-        <div className="grid grid-cols-1 gap-4 md:gap-6 mt-10 mx-auto">
+        <div
+          className="grid grid-cols-1 gap-4 md:gap-6 mt-10 mx-auto"
+          style={{ perspective: "1000px" }}
+        >
           {/* card */}
           {projects.data &&
             projects.data
