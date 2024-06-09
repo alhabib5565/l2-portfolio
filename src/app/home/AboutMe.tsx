@@ -12,7 +12,7 @@ const AboutMe = async () => {
   );
   const data = await response.json();
   const skills = data.data;
-  const tools = ["GitHub", "VS Code", "Postman", "Vercel", "Netlify"];
+  // const tools = ["GitHub", "VS Code", "Postman", "Vercel", "Netlify"];
   return (
     <div className="mt-20 py-[50px]">
       <Container>
@@ -65,26 +65,26 @@ const AboutMe = async () => {
               My skills
             </h1>
             <div>
-              <h3 className="text-[16px] font-extrabold ">Technology</h3>
+              {/* <h3 className="text-[16px] font-extrabold ">Technology</h3> */}
               <div className="mt-3 flex gap-3 md:gap-4 flex-wrap">
                 {skills.map((skill: any) => (
                   <div
                     key={skill}
-                    className="flex items-center gap-4 text-[16px] font-semibold p-2 rounded-full bg-white text-[#666]"
+                    className="h-20 w-20 grid place-items-center gap-4 text-[16px] font-semibold p-2 rounded-full bg-white text-[#666] shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] shadow-black"
                   >
                     <Image
-                      height={40}
-                      width={40}
+                      height={60}
+                      width={60}
                       src={skill.skillAvater}
                       className="rounded-full"
                       alt=""
                     />
-                    <span>{skill.name}</span>
+                    {/* <span>{skill.name}</span> */}
                   </div>
                 ))}
               </div>
             </div>
-
+            {/* 
             <div className="mt-4">
               <h3 className="text-[16px] font-extrabold ">Tools</h3>
               <div className="mt-3 flex gap-4 flex-wrap">
@@ -97,7 +97,7 @@ const AboutMe = async () => {
                   </span>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </Container>
