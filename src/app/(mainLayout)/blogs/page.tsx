@@ -1,4 +1,4 @@
-import SectionHeader from "@/app/home/SectionHeader";
+import SectionHeader from "@/components/home/SectionHeader";
 import BlogCard from "@/components/shared/BlogCard";
 import Container from "@/components/shared/Container";
 import { TBlog } from "@/type/common";

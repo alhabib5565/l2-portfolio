@@ -41,17 +41,14 @@ const ProjectCard = ({ project }: { project: TProject }) => {
       </div>
       <div className="flex gap-6 flex-col justify-between mt-4">
         <div className="space-y-2">
-          <span className="absolute rotate-45 -top-8 text-center capitalize origin-top-left -right-[90px] w-[200px] px-4 py-1.5 text-lg border-primary border-2 bg-transparent bg-[#DC5847] ">
+          <span className="absolute rotate-45 -top-8 text-center capitalize origin-top-left -right-[90px] w-[200px] px-4 py-1.5 text-lg border-primary border-2 bg-[#DC5847] ">
             {project.category}
           </span>
           <h1 className="text-2xl -mt-2 font-extrabold tracking-[0.5px]">
             {project.name}
           </h1>
           <p className="text-[16px] text-gray-300 font-medium">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
-            placeat tempore corrupti? Voluptatum quibusdam perferendis quae ex
-            quam? Delectus vitae deserunt a inventore, quas fuga numquam
-            accusamus nisi odit officia?
+            {project.description}
           </p>
           <div className="flex flex-wrap gap-2">
             {project.technologies.map((item) => (

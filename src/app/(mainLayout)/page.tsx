@@ -1,9 +1,9 @@
+import AboutMe from "@/components/home/about/AboutMe";
+import Blogs from "@/components/home/Blogs";
+import ContactMe from "@/components/home/ContactMe";
+import Hero from "@/components/home/Hero";
+import Projects from "@/components/home/Projects";
 import React from "react";
-import Hero from "../home/Hero";
-import AboutMe from "../home/AboutMe";
-import Projects from "../home/Projects";
-import ContactMe from "../home/ContactMe";
-import Blogs from "../home/Blogs";
 
 const HomePage = () => {
   return (

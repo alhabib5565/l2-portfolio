@@ -6,6 +6,7 @@ export type TOptions = {
 export type TSkills = {
     name: string;
     expertiseLavel: string;
+    skillAvater: string
 };
 
 export type TBlog = {
