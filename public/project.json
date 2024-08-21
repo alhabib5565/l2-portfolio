@@ -1,0 +1,251 @@
+[
+        {
+            "name": "QuickShop E-Commerce Platform",
+            "image": "https://i.ibb.co/ykn8RvZ/quickshop-kohl-vercel-app.png",
+            "category": "Full-stack",
+            "description": "This is a practice e-commerce platform designed to provide users with a realistic shopping\nexperience. It includes many essential features found in modern e-commerce sites, such as user\nauthentication, product browsing, shopping cart management, and order processing.",
+            "technologies": [
+                {
+                    "value": "Next.js",
+                    "label": "Next.js",
+                    "_id": "66b62bdb53c778b8acdf7ce9"
+                },
+                {
+                    "value": "TypeScript",
+                    "label": "TypeScript",
+                    "_id": "66b62bdb53c778b8acdf7cea"
+                },
+                {
+                    "value": "Mui",
+                    "label": "Mui",
+                    "_id": "66b62bdb53c778b8acdf7ceb"
+                },
+                {
+                    "value": "Redux",
+                    "label": "Redux",
+                    "_id": "66b62bdb53c778b8acdf7cec"
+                },
+                {
+                    "value": "Expres.js",
+                    "label": "Expres.js",
+                    "_id": "66b62bdb53c778b8acdf7ced"
+                },
+                {
+                    "value": "MongoDB",
+                    "label": "MongoDB",
+                    "_id": "66b62bdb53c778b8acdf7cee"
+                },
+                {
+                    "value": "Mongoose",
+                    "label": "Mongoose",
+                    "_id": "66634da9971bea8a25e2ab98"
+                }
+            ],
+            "liveUrl": "https://quickshop-kohl.vercel.app/",
+            "clientCode": "https://github.com/alhabib5565/l2-f-assignment-8-client",
+            "serverCode": "https://github.com/alhabib5565/cleaning_supplies_store_server",
+            "__v": 0,
+            "order": 1
+        },
+        {
+            "name": "Distribution of Relief Goods Management Platform",
+            "image": "https://i.ibb.co/DrZsmxy/l2-assignment-7-client-vercel-app.png",
+            "category": "frontend",
+            "description": "The Distribution of Relief Goods Management Platform is an web application designed to\nenhance the coordination and management of relief goods distribution in post-disaster scenarios.",
+            "technologies": [
+                {
+                    "value": "TypeScript",
+                    "label": "TypeScript",
+                    "_id": "66ba10d19b9c004a9dd8c942"
+                },
+                {
+                    "value": "React.js",
+                    "label": "React.js",
+                    "_id": "66ba10d19b9c004a9dd8c943"
+                },
+                {
+                    "value": "Tailwind",
+                    "label": "Tailwind",
+                    "_id": "66ba10d19b9c004a9dd8c944"
+                },
+                {
+                    "value": "Redux",
+                    "label": "Redux",
+                    "_id": "66ba10d19b9c004a9dd8c945"
+                }
+            ],
+            "liveUrl": "https://l2-assignment-7-client.vercel.app/",
+            "clientCode": "https://github.com/alhabib5565/distribution-of-relief-goods-management-platform-client",
+            "__v": 0,
+            "order": 2
+        },
+        {
+            "name": "Inventory Management",
+            "image": "https://i.ibb.co/NSH6GMm/localhost-5173-1.png",
+            "category": "frontend",
+            "description": "Event 360 showcases event management features with a hero image, event packages, services, items, pricing plans, client testimonials, a gallery, and recent events. It’s designed to help users explore and plan events effectively.",
+            "technologies": [
+                {
+                    "value": "TypeScript",
+                    "label": "TypeScript",
+                    "_id": "66c22d0c7bcd4a6d1608a076"
+                },
+                {
+                    "value": "React.js",
+                    "label": "React.js",
+                    "_id": "66c22d0c7bcd4a6d1608a077"
+                },
+                {
+                    "value": "Tailwind",
+                    "label": "Tailwind",
+                    "_id": "66c22d0c7bcd4a6d1608a078"
+                },
+                {
+                    "value": "Framer Motion",
+                    "label": "Framer Motion",
+                    "_id": "66c22d0c7bcd4a6d1608a079"
+                }
+            ],
+            "liveUrl": "https://eventthreesixty.vercel.app/",
+            "clientCode": "https://github.com/alhabib5565/invetory-management",
+            "__v": 0,
+            " order": 3
+        },
+        {
+            "name": "Tripsure (team project)",
+            "image": "https://i.ibb.co/FbCCZ63/tripsure.png",
+            "category": "Full-stack",
+            "description": "As a Frontend Developer in a team project, I worked with the MERN stack to create and integrate responsive user interfaces. I gained valuable experience in UI/UX design, API integration, and team collaboration, enhancing my skills in developing dynamic web applications.",
+            "technologies": [
+                {
+                    "value": "HTML",
+                    "label": "HTML",
+                    "_id": "664243010d9939d5f36e298c"
+                },
+                {
+                    "value": "Tailwind",
+                    "label": "Tailwind",
+                    "_id": "664243010d9939d5f36e298d"
+                },
+                {
+                    "value": "Javascript",
+                    "label": "Javascript",
+                    "_id": "664243010d9939d5f36e298e"
+                },
+                {
+                    "value": "Redux",
+                    "label": "Redux",
+                    "_id": "664243010d9939d5f36e298f"
+                },
+                {
+                    "value": "Express.js",
+                    "label": "Express.js",
+                    "_id": "664243010d9939d5f36e2990"
+                },
+                {
+                    "value": "React.js",
+                    "label": "React.js",
+                    "_id": "664243010d9939d5f36e2991"
+                },
+                {
+                    "value": "MongoDB",
+                    "label": "MongoDB",
+                    "_id": "664243010d9939d5f36e2992"
+                },
+                {
+                    "value": "CSS",
+                    "label": "CSS",
+                    "_id": "664243010d9939d5f36e2993"
+                }
+            ],
+            "liveUrl": "https://tripsure-client.web.app/",
+            "clientCode": "https://github.com/Sayemsaadat0/tripsure-client",
+            "serverCode": "https://github.com/Sayemsaadat0/tripsure-server",
+            "__v": 0,
+            " order": 4
+        },
+        {
+            "name": "E_Class",
+            "image": "https://i.ibb.co/hg6G0k5/eclass.png",
+            "category": "Full-stack",
+            "description": "Developed a user-friendly website where students can buy classes from instructors on various school and college subjects.",
+            "technologies": [
+                {
+                    "value": "HTML",
+                    "label": "HTML",
+                    "_id": "666984b8f45f3121cb8e6633"
+                },
+                {
+                    "value": "CSS",
+                    "label": "CSS",
+                    "_id": "666984b8f45f3121cb8e6634"
+                },
+                {
+                    "value": "Tailwind",
+                    "label": "Tailwind",
+                    "_id": "666984b8f45f3121cb8e6635"
+                },
+                {
+                    "value": "JavaScript",
+                    "label": "JavaScript",
+                    "_id": "666984b8f45f3121cb8e6636"
+                },
+                {
+                    "value": "React.js",
+                    "label": "React.js",
+                    "_id": "666984b8f45f3121cb8e6637"
+                },
+                {
+                    "value": "Expres.js",
+                    "label": "Expres.js",
+                    "_id": "666984b8f45f3121cb8e6638"
+                },
+                {
+                    "value": "Firebase",
+                    "label": "Firebase",
+                    "_id": "666984b8f45f3121cb8e6639"
+                },
+                {
+                    "value": "MongoDB",
+                    "label": "MongoDB",
+                    "_id": "666984b8f45f3121cb8e663a"
+                }
+            ],
+            "liveUrl": "https://edu-clas.web.app/",
+            "clientCode": "https://github.com/alhabib5565/summer_camp_client",
+            "serverCode": "https://github.com/alhabib5565/summer_camp_server",
+            "__v": 0,
+            " order": 4
+        },
+        {
+            "name": "Course review platform ",
+            "image": "https://i.ibb.co/pKpLLH0/course-review.jpg",
+            "category": "backend",
+            "description": "This project is an enhanced version of a course management system backend, incorporating robust user authentication, authorization, and user-related information. The backend is developed using Express.js, MongoDB, Mongoose, and TypeScript.\n\n",
+            "technologies": [
+                {
+                    "value": "Typescript",
+                    "label": "Typescript",
+                    "_id": "66634da9971bea8a25e2ab95"
+                },
+                {
+                    "value": "Express.js",
+                    "label": "Express.js",
+                    "_id": "66634da9971bea8a25e2ab96"
+                },
+                {
+                    "value": "MongoDB",
+                    "label": "MongoDB",
+                    "_id": "66634da9971bea8a25e2ab97"
+                },
+                {
+                    "value": "Mongoose",
+                    "label": "Mongoose",
+                    "_id": "66634da9971bea8a25e2ab98"
+                }
+            ],
+            "liveUrl": "https://course-review-platform-server.vercel.app/",
+            "serverCode": "https://github.com/alhabib5565/course-review-platform-server",
+            "__v": 0
+        }
+    ]

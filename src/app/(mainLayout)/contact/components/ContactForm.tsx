@@ -29,8 +29,8 @@ const ContactForm = () => {
         rows={10}
         className="bg-transparent"
       />
-      <div className="flex justify-end">
-        <Button>Send</Button>
+      <div className="flex justify-end -mt-1">
+        <Button className="w-full">Send</Button>
       </div>
     </form>
   );

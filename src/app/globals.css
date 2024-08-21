@@ -80,7 +80,7 @@
     @apply content-[''] absolute -bottom-2 left-0 h-1 w-20 rounded-md bg-primary;
   }
   .bg-animate-btn {
-    @apply relative z-10 text-sm px-5 py-2 rounded-md flex justify-center items-center bg-transparent bg-[#2C3E50] shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset]  overflow-hidden;
+    @apply relative z-10 text-sm px-3 py-1 rounded-md flex justify-center items-center bg-transparent bg-[#2C3E50] shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset]  overflow-hidden;
   }
   .bg-animate-btn::before {
     @apply content-[''] absolute top-0 right-[100%] h-1/2 w-full bg-[#233141] rounded-t -z-10 opacity-0;

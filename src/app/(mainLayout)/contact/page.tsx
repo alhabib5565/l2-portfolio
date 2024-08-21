@@ -6,8 +6,8 @@ import linkedin from "../../../assets/icons/linkedin.png";
 import facebook from "../../../assets/icons/facebook.webp";
 import Image from "next/image";
 import Link from "next/link";
-import SectionHeader from "@/app/home/SectionHeader";
 import ContactForm from "./components/ContactForm";
+import SectionHeader from "@/components/home/SectionHeader";
 const ContactPage = () => {
   const socialLinks = [
     {

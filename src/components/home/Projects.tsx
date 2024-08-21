@@ -17,14 +17,16 @@ const Projects = async () => {
 "
         />
         <div
-          className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-10 mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-10 mx-auto"
           style={{ perspective: "1000px" }}
         >
           {/* card */}
           {projects.data &&
-            projects.data.map((item: TProject) => (
-              <ProjectCard project={item} key={item.name} />
-            ))}
+            projects.data
+              .slice(0, 6)
+              .map((item: TProject) => (
+                <ProjectCard project={item} key={item.name} />
+              ))}
         </div>
       </Container>
     </div>

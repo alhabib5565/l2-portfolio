@@ -6,7 +6,10 @@ import React from "react";
 
 const BlogsPage = async () => {
   const response = await fetch(
-    "https://portfolio-server-six-phi.vercel.app/api/v1/blogs"
+    "https://portfolio-server-six-phi.vercel.app/api/v1/blogs",
+    {
+      cache: "no-store",
+    }
   );
   const blogs = await response.json();
   return (

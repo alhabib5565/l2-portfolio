@@ -3,8 +3,6 @@ import { convertTimee } from "@/utils/convertTime";
 import Image from "next/image";
 import React from "react";
 
-const a = { params: { blogId: "6643147c3031768eacfbb19e" }, searchParams: {} };
-
 type TParams = {
   params: {
     blogId: string;

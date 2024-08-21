@@ -6,7 +6,8 @@ import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: "Portfoli",
-  description: "MD. Al-Habib (MERN stack developer)",
+  description:
+    "MD. Al-Habib Front-End Developer || Full-Stack Developer || MERN stack developer",
 };
 
 export default function RootLayout({
