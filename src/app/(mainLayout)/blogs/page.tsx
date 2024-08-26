@@ -22,11 +22,9 @@ const BlogsPage = async () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-4 md:gap-6 mt-10 mx-auto">
           {/* card */}
           {blogs.data &&
-            blogs.data
-              .slice(0, 3)
-              .map((item: TBlog) => (
-                <BlogCard blogInfo={item} key={item._id} />
-              ))}
+            blogs.data.map((item: TBlog) => (
+              <BlogCard blogInfo={item} key={item._id} />
+            ))}
         </div>
       </Container>
     </div>

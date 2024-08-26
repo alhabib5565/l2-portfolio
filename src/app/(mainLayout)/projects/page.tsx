@@ -6,7 +6,10 @@ import React from "react";
 
 const ProjectPage = async () => {
   const response = await fetch(
-    "https://portfolio-server-six-phi.vercel.app/api/v1/projects"
+    "https://portfolio-server-six-phi.vercel.app/api/v1/projects",
+    {
+      cache: "no-store",
+    }
   );
   const projects = await response.json();
   return (

@@ -36,7 +36,7 @@ const BlogDetailsPage = async ({ params }: TParams) => {
   //   console.log(convertTimee());
 
   return (
-    <Container>
+    <Container className="mt-10">
       <h1 className="text-center text-[35px] md:text-[50px] font-extrabold mb-4">
         {blog?.data?.blogTitle}
       </h1>

@@ -66,7 +66,12 @@ const Hero = () => {
             className="mt-6 flex items-center gap-6"
           >
             <Button>
-              <a href={resumeLink} download="resume.pdf">
+              <a
+                href={
+                  "https://drive.google.com/file/d/1_xtl2ZLvXzBubCfwZ_VrDq4Aya5R1n_U/view"
+                }
+                download="resume.pdf"
+              >
                 Download My Resume
               </a>
             </Button>

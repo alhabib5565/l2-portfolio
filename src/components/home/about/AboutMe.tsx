@@ -5,7 +5,6 @@ import Link from "next/link";
 import React from "react";
 import SectionHeader from "../SectionHeader";
 import { motion } from "framer-motion";
-import Skills from "./Skills";
 import {
   aboutMeSectionContainerVariants,
   avaterContainerVariants,
